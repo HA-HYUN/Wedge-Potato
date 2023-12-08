@@ -1,6 +1,6 @@
 import cv2
 
-def detect_text_regions(input_image_path, output_image_path):
+def detect_text_regions(input_image_path):
     # Read the image
     image = cv2.imread(input_image_path)
 
@@ -19,15 +19,9 @@ def detect_text_regions(input_image_path, output_image_path):
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)  # Draw rectangles around the contours
 
     # Display the image with contours
-    cv2.imshow('Contours', image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.imshow('Contours', image)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
 
     # Save the resulting image with contours
-    cv2.imwrite(output_image_path, image)
-
-    return image  # Return the image with drawn contours (optional)
-
-input_path = 'opencvtest.png'  # Input image file
-output_path = 'result_with_contours.png'  # Output file to save the result
-result_image = detect_text_regions(input_path, output_path)
+    cv2.imwrite('./image/split_image.png', image)
