@@ -62,7 +62,7 @@ input_image = 'Path of the photo you want to convert'
 ![image](./image/split_image.png)
 
 4. Save text
-
+![text](./output/test_output.txt)
 
 
 
